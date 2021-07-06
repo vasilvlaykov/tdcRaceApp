@@ -1,0 +1,262 @@
+html {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Helvetica", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.rApp-screen {
+  width: 302px;
+  height: 650px;
+  background-color: #222832;
+  border-radius: 17px;
+}
+
+.rApp-navbar {
+  display: flex;
+  background: #1e3954;
+  font-weight: bold;
+  border-bottom: 2px solid rgb(201, 211, 255);
+  color: white;
+  border-top-left-radius: 17px;
+  border-top-right-radius: 17px;
+}
+
+.rApp-navbar-left {
+  width: 50%;
+  padding: 20px 0px;
+  border-right: 1px solid rgb(201, 211, 255);
+  text-align: center;
+  background: #43627e;
+  border-top-left-radius: 17px;
+}
+
+.rApp-navbar-right {
+  width: 50%;
+  padding: 20px 0px;
+  border-left: 1px solid rgb(201, 211, 255);
+  text-align: center;
+  border-top-right-radius: 17px;
+}
+
+.rApp-navbar-left:hover,
+.rApp-navbar-right:hover {
+  cursor: pointer;
+}
+
+.rApp-body {
+  height: 85%;
+  overflow-y: auto;
+  position: relative;
+}
+
+.rApp-body::-webkit-scrollbar {
+  display: none;
+}
+
+.rApp-list-of-races {
+  padding: 20px;
+}
+
+.rApp-race {
+  display: flex;
+  position: relative;
+  color: white;
+  padding: 15px 10px;
+  background: #30475c;
+  border: 1px solid rgb(201, 211, 255);
+  margin-bottom: 10px;
+}
+
+.rApp-race-join-btn {
+  position: absolute;
+  right: 2%;
+  transform: translate(0%, -5px);
+  background-color: #80ff00;
+  padding: 5px 8px;
+  border: 2px solid #80ff00;
+  border-radius: 5px;
+}
+
+.rApp-race-del-btn {
+  display: none;
+  position: absolute;
+  right: 16%;
+  transform: translate(0%, -5px);
+  background-color: #fd8900;
+  padding: 5px 8px;
+  border: 2px solid #fd8900;
+  border-radius: 5px;
+}
+
+.rApp-race-publish-btn {
+    display: block;
+    position: absolute;
+    right: 29%;
+    transform: translate(0%, -5px);
+    background-color: #37a5ff;
+    padding: 5px 8px;
+    border: 2px solid #37a5ff;
+    border-radius: 5px;
+  }
+
+.rApp-race-join-btn:hover,
+.rApp-race-del-btn:hover,
+.rApp-race-publish-btn:hover {
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid white;
+  transition: 300ms;
+}
+
+.rApp-host-nav-buttons {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 20px 0px 20px;
+}
+
+.rApp-host-nav-buttons button {
+  width: 100px;
+  padding: 5px 0;
+  font-weight: bold;
+  background-color: rgb(201, 211, 255);
+  border: 2px solid rgb(201, 211, 255);
+  border-radius: 5px;
+}
+
+.rApp-host-nav-buttons button:hover,
+.rApp-create-race-btn:hover {
+  background-color: white;
+  border: 2px solid white;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.rApp-create-race-btn {
+  display: none;
+  width: 120px;
+  height: 40px;
+  font-weight: bold;
+  position: absolute;
+  top: 89%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(201, 211, 255);
+  border: 2px solid rgb(201, 211, 255);
+  border-radius: 5px;
+}
+
+.rApp-confirm-modal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.rApp-modal-window {
+    background: #1e3954;
+    padding: 20px;
+}
+
+.rApp-give-name {
+    background: #43627e;
+    border: 1px solid rgb(201, 211, 255);
+    outline: none;
+    color: rgb(201, 211, 255);
+    font-weight: bold;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+.rApp-give-name::placeholder {
+    color: rgb(201, 211, 255);
+}
+
+.rApp-modal-window-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rApp-modal-window-confirm {
+    border: 1px solid #80ff00;
+    background: #80ff00;
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.rApp-modal-window-decline {
+    border: 1px solid #fd8900;
+    background: #fd8900;
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.rApp-modal-window-buttons button:hover {
+    cursor: pointer;
+    transition: 300ms;
+    border: 1px solid white;
+    background: white;
+}
+
+.rApp-modal-name-error {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.rApp-confirm-modal-delete {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.rApp-modal-confirm-task-del {
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.rApp-confirm-modal-publish {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.rApp-modal-confirm-task-pub {
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+}

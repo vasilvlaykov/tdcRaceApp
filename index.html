@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <script src="script.js" type="module" defer></script>
+    <title>Racing App</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="rApp-screen">
+        <div class="rApp-navbar">
+          <div class="rApp-navbar-left">JOIN</div>
+          <div class="rApp-navbar-right">HOST</div>
+        </div>
+        <div class="rApp-body">
+          <div class="rApp-host-nav-buttons">
+            <button class="rApp-my-races">MY RACES</button>
+            <button class="rApp-public-races">PUBLIC</button>
+          </div>
+          <div class="rApp-list-of-races"></div>
+        </div>
+        <button class="rApp-create-race-btn">CREATE</button>
+      </div>
+      <div class="rApp-confirm-modal">
+        <div class="rApp-modal-window">
+          <div class="rApp-modal-name-error">Невалидно име</div>
+          <input
+            type="text"
+            class="rApp-give-name"
+            placeholder="Име"
+            maxlength="16"
+          />
+          <div class="rApp-modal-window-buttons">
+            <button id="confirmNewRaceBtn" class="rApp-modal-window-confirm">CONFIRM</button>
+            <button id="declineNewRaceBtn" class="rApp-modal-window-decline">DECLINE</button>
+          </div>
+        </div>
+      </div>
+      <div class="rApp-confirm-modal-delete">
+        <div class="rApp-modal-window">
+          <div class="rApp-modal-confirm-task-del">Сигурни ли сте?</div>
+          <div class="rApp-modal-window-buttons">
+            <button id="confirmRaceDel" class="rApp-modal-window-confirm">CONFIRM</button>
+            <button id="declineRaceDel" class="rApp-modal-window-decline">DECLINE</button>
+          </div>
+        </div>
+      </div>
+      <div class="rApp-confirm-modal-publish">
+        <div class="rApp-modal-window">
+          <div class="rApp-modal-confirm-task-pub">Сигурни ли сте?</div>
+          <div class="rApp-modal-window-buttons">
+            <button id="confirmRacePub" class="rApp-modal-window-confirm">CONFIRM</button>
+            <button id="declineRacePub" class="rApp-modal-window-decline">DECLINE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
