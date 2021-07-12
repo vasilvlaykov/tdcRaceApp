@@ -91,6 +91,7 @@ body {
   padding: 5px 8px;
   border: 2px solid #80ff00;
   border-radius: 5px;
+  color: #000;
 }
 
 .rApp-race-del-btn {
@@ -102,18 +103,20 @@ body {
   padding: 5px 8px;
   border: 2px solid #fd8900;
   border-radius: 5px;
+  color: #000;
 }
 
 .rApp-race-publish-btn {
-    display: block;
-    position: absolute;
-    right: 29%;
-    transform: translate(0%, -5px);
-    background-color: #37a5ff;
-    padding: 5px 8px;
-    border: 2px solid #37a5ff;
-    border-radius: 5px;
-  }
+  display: block;
+  position: absolute;
+  right: 30%;
+  transform: translate(0%, -5px);
+  background-color: #37a5ff;
+  padding: 5px 8px;
+  border: 2px solid #37a5ff;
+  border-radius: 5px;
+  color: #000;
+}
 
 .rApp-race-join-btn:hover,
 .rApp-race-del-btn:hover,
@@ -122,6 +125,7 @@ body {
   background-color: white;
   border: 2px solid white;
   transition: 300ms;
+  z-index: 1;
 }
 
 .rApp-host-nav-buttons {
@@ -163,100 +167,122 @@ body {
 }
 
 .rApp-confirm-modal {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.3);
-    display: none;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  display: none;
+  justify-content: center;
+  align-items: center;
 }
 
 .rApp-modal-window {
-    background: #1e3954;
-    padding: 20px;
+  background: #1e3954;
+  padding: 20px;
 }
 
 .rApp-give-name {
-    background: #43627e;
-    border: 1px solid rgb(201, 211, 255);
-    outline: none;
-    color: rgb(201, 211, 255);
-    font-weight: bold;
-    padding: 5px;
-    margin-bottom: 15px;
+  background: #43627e;
+  border: 1px solid rgb(201, 211, 255);
+  outline: none;
+  color: rgb(201, 211, 255);
+  font-weight: bold;
+  padding: 5px;
+  margin-bottom: 15px;
 }
 
 .rApp-give-name::placeholder {
-    color: rgb(201, 211, 255);
+  color: rgb(201, 211, 255);
 }
 
 .rApp-modal-window-buttons {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .rApp-modal-window-confirm {
-    border: 1px solid #80ff00;
-    background: #80ff00;
-    border-radius: 3px;
-    font-weight: bold;
-    padding: 5px;
+  border: 1px solid #80ff00;
+  background: #80ff00;
+  border-radius: 3px;
+  font-weight: bold;
+  padding: 5px;
 }
 
 .rApp-modal-window-decline {
-    border: 1px solid #fd8900;
-    background: #fd8900;
-    border-radius: 3px;
-    font-weight: bold;
-    padding: 5px;
+  border: 1px solid #fd8900;
+  background: #fd8900;
+  border-radius: 3px;
+  font-weight: bold;
+  padding: 5px;
 }
 
 .rApp-modal-window-buttons button:hover {
-    cursor: pointer;
-    transition: 300ms;
-    border: 1px solid white;
-    background: white;
+  cursor: pointer;
+  transition: 300ms;
+  border: 1px solid white;
+  background: white;
 }
 
 .rApp-modal-name-error {
-    color: red;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 10px;
-    display: none;
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  display: none;
 }
 
 .rApp-confirm-modal-delete {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.3);
-    display: none;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  display: none;
+  justify-content: center;
+  align-items: center;
 }
 
 .rApp-modal-confirm-task-del {
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    padding: 10px 20px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
 }
 
 .rApp-confirm-modal-publish {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.3);
-    display: none;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  display: none;
+  justify-content: center;
+  align-items: center;
 }
 
 .rApp-modal-confirm-task-pub {
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    padding: 10px 20px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #ccc;
+  color: #000;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 2;
+  top: 100%;
+  right: 50%;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }

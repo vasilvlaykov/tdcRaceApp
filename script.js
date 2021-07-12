@@ -23,9 +23,9 @@ let declineRacePub = document.getElementById('declineRacePub')
 
 // raw data за тестване ****************
 
-let joinRacesArr = [{rName:'Sustezanie', isPublic: true}, {rName:'Sustezanie', isPublic: true}, {rName:'Sustezanie', isPublic: true}, {rName:'Sustezanie', isPublic: true}]
-let hostMyRacesArr = [{rName:'Sustezanie moe', isPublic: false}, {rName:'Sustezanie', isPublic: true}, {rName:'Sustezanie', isPublic: false}, {rName:'Sustezanie', isPublic: true}]
-let hostPublicRacesArr = [{rName:'Sustezanie public', isPublic: true}, {rName:'Sustezanie', isPublic: true}, {rName:'Sustezanie', isPublic: true}, {rName:'Sustezanie', isPublic: true}]
+let joinRacesArr = [{ rName: 'Sustezanie', isPublic: true }, { rName: 'Sustezanie', isPublic: true }, { rName: 'Sustezanie', isPublic: true }, { rName: 'Sustezanie', isPublic: true }]
+let hostMyRacesArr = [{ rName: 'Sustezanie moe', isPublic: false }, { rName: 'Sustezanie', isPublic: true }, { rName: 'Sustezanie', isPublic: false }, { rName: 'Sustezanie', isPublic: true }]
+let hostPublicRacesArr = [{ rName: 'Sustezanie public', isPublic: true }, { rName: 'Sustezanie', isPublic: true }, { rName: 'Sustezanie', isPublic: true }, { rName: 'Sustezanie', isPublic: true }]
 
 // ***************************************
 renderRaceArray(joinRacesArr)
@@ -96,15 +96,18 @@ function createRaceCard(raceName, isPublic) {
     let raceCard = () => html`
     <div class="rApp-race">
         <div class="rApp-race-name">${raceName}</div>
-        <button class="rApp-race-join-btn">
+        <div class="rApp-race-join-btn tooltip">
             <i class="fas fa-flag-checkered"></i>
-        </button>
-        <button class="rApp-race-del-btn">
+            <span class="tooltiptext">Започни</span>
+        </div>
+        <div class="rApp-race-del-btn tooltip">
             <i class="fas fa-trash-alt"></i>
-        </button>
-        <button class="rApp-race-publish-btn">
+            <span class="tooltiptext">Изтрий</span>
+        </div>
+        <div class="rApp-race-publish-btn tooltip">
             <i class="fas fa-upload"></i>
-        </button>
+            <span class="tooltiptext">Публикувай</span>
+        </div>
     </div>
     `
 
@@ -144,7 +147,7 @@ function createRaceCard(raceName, isPublic) {
 
             pubRaceModal.style.display = 'none'
         })
-        
+
         declineRacePub.addEventListener('click', function () {
             pubRaceModal.style.display = 'none'
         })
